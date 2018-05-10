@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 3 Transitions</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: green;
+        }
+
+        #transition-width{
+            transition: width 2s;
+        }
+
+        #transition-width:hover{
+            width: 200px;
+        }
+
+        #transition-height{
+            transition: height 2s;
+        }
+
+        #transition-height:hover{
+            height: 200px;
+        }
+
+        #transition-both{
+            transition: all 2s;
+        }
+
+        #transition-both:hover{
+            width: 200px;
+            height: 200px;
+        }
+
+        #transition-rotate{
+            transition: all 2s;
+        }
+
+        #transition-rotate:hover{
+            width: 200px;
+            transform: rotate(180deg);
+        }
+
+        #transition-all{
+            margin-bottom: 100px;
+            transition: width 2s;
+            /* values are linear , ease-in , ease-out , ease-in-out */
+            transition-timing-function: ease-in-out;
+            transition-delay: 2s;
+        }
+
+        #transition-all:hover{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Transition Width</p>
+    <div id="transition-width"></div>
+
+    <p>Transition Height</p>
+    <div id="transition-height"></div>
+
+    <p>Transition Both</p>
+    <div id="transition-both"></div>
+
+    <p>Transition rotate</p>
+    <div id="transition-rotate"></div>
+
+    <p>Transition All</p>
+    <div id="transition-all"></div>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Animation</title>
+    <style>
+        .simple{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            animation-name: simple;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+        @keyframes simple {
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: yellow;
+            }
+        }
+
+        .percentage{
+            width: 100px;
+            height: 100px;
+            background-color: forestgreen;
+            animation-name: percentage;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes percentage {
+            0%{
+                background-color: yellow;
+            }
+            25%{
+                background-color: red;
+            }
+            50%{
+                background-color: black;
+            }
+            75%{
+                background-color: blue;
+            }
+            100%{
+                background-color: orange;
+            }
+        }
+
+        .news{
+            background-color: forestgreen;
+            font-family: "Comic Sans MS", sans-serif;
+            color: white;
+            font-size: 25px;
+            animation-name: news;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes news {
+            0% , 50% , 100%{
+                background-color: darkgreen;
+            }
+            25% , 75%{
+                background-color: limegreen;
+            }
+        }
+
+        .news p{
+            animation-name: flash-news;
+            animation-duration: 14s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes flash-news {
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(-80%);
+            }
+        }
+
+        .animate{
+            margin-bottom: 300px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: animate;
+            animation-timing-function: linear;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            position: relative; /* mandatory */
+        }
+
+        @keyframes animate {
+            0%{
+                left:0;
+                top:0;
+                background: white url("img/gallery2.jpeg") fixed no-repeat bottom;
+                box-shadow: 7px 7px 7px green;
+                transform: rotate(90deg);
+                border-radius: 10%;
+            }
+            25%{
+                left:200px;
+                top:0;
+                background: white url("img/gallery2.jpeg") fixed no-repeat bottom;
+                box-shadow: 7px 7px 7px red;
+                transform: rotate(180deg);
+                border-radius: 20%;
+            }
+            50%{
+                left:200px;
+                top:200px;
+                background: white url("img/gallery2.jpeg") fixed no-repeat bottom;
+                box-shadow: 7px 7px 7px yellow;
+                transform: rotate(270deg);
+                border-radius: 30%;
+            }
+            75%{
+                left:0;
+                top:200px;
+                background: white url("img/gallery2.jpeg") fixed no-repeat bottom;
+                box-shadow: 7px 7px 7px green;
+                transform: rotate(360deg);
+                border-radius: 40%;
+            }
+            100%{
+                left:0;
+                top:0;
+                background: white url("img/gallery2.jpeg") fixed no-repeat bottom;
+                box-shadow: 7px 7px 7px yellow;
+                transform: rotate(450deg);
+                border-radius: 50%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <h3>Simple Animation</h3>
+    <div class="simple"></div>
+
+    <br><br><hr>
+
+    <h3>percentages animation</h3>
+    <div class="percentage"></div>
+
+    <br><br><hr>
+
+    <h3>News</h3>
+    <div class="news">
+        <p>Latest News: UiBrains Group reached 400+ group members Today</p>
+    </div>
+
+    <br><br><hr>
+
+    <h3>Animate</h3>
+    <div class="animate">
+
+    </div>
+    <br><br><hr>
+    <br><br><hr>
+
+</body>
+</html>
